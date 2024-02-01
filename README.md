@@ -3,9 +3,20 @@ Xcode File Template for generating VIPER modules: View, Interactor, Presenter, a
 
 # How To Install
 1. Clone the repository
-2. Navigate to Xcode Templates folder: ```~/Library/Developer/Xcode/Templates/```. If Templates folder doesn't exist, create it
-3. Copy and paste the VIPER Module.xctemplate in Templates folder
+2. Run the following command from the root folder:
 
+> make install_templates
+
+To uninstall Xcode template run:
+
+> make uninstall_templates
+
+===
+# Installation instructions
+
+To install VIPER Xcode templates clone this repo and run the following command from the root folder:
+
+After that, restart your Xcode if it was already opened.
 # Use
 1. Open Xcode
 2. ```File -> New -> File``` or ```⌘ N```

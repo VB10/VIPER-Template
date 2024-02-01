@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ___VARIABLE_ModuleName___ViewController: UIViewController {
+final class ___VARIABLE_ModuleName___ViewController: UIViewController, NavigationView {
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -16,7 +16,7 @@ class ___VARIABLE_ModuleName___ViewController: UIViewController {
     }
 
     // MARK: - Properties
-    var presenter: ViewToPresenter___VARIABLE_ModuleName___Protocol?
+    var presenter: ViewToPresenter___VARIABLE_ModuleName___Protocol!
     
 }
 
