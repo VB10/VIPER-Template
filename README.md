@@ -107,12 +107,12 @@ class AuthInteractor: PresenterToInteractorAuthProtocol {
 ```swift
 import Foundation
 
-class AuthPresenter: ViewToPresenterAuthProtocol {
+final class AuthPresenter: ViewToPresenterAuthProtocol {
 
     // MARK: Properties
-    var view: PresenterToViewAuthProtocol?
-    var interactor: PresenterToInteractorAuthProtocol?
-    var router: PresenterToRouterAuthProtocol?
+    let view: PresenterToViewAuthProtocol
+    let interactor: PresenterToInteractorAuthProtocol
+    let router: PresenterToRouterAuthProtocol
 }
 
 extension AuthPresenter: InteractorToPresenterAuthProtocol {
@@ -126,23 +126,28 @@ extension AuthPresenter: InteractorToPresenterAuthProtocol {
 import Foundation
 import UIKit
 
-class AuthRouter: PresenterToRouterAuthProtocol {
-
+final class  AuthRouter: PresenterToRouterLastTest2Protocol {
     // MARK: Static methods
+
     static func createModule() -> UIViewController {
-        
         let viewController = AuthViewController()
-        
-        let presenter: ViewToPresenterQuotesProtocol & InteractorToPresenterQuotesProtocol = AuthPresenter()
-        
+        let interactor = AuthInteractor()
+        let router = AuthRouter(navigation: viewController)
+
+        let presenter: ViewToPresenterLastTest2Protocol & InteractorToPresenterLastTest2Protocol = LastTest2Presenter(
+            interactor: interactor, router: router, view: viewController)
+
         viewController.presenter = presenter
-        viewController.presenter?.router = AuthRouter()
-        viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = AuthInteractor()
-        viewController.presenter?.interactor?.presenter = presenter
-        
+        interactor.presenter = presenter
+
         return viewController
     }
-    
+
+    let navigation: NavigationView
+
+    init(navigation: NavigationView) {
+        self.navigation = navigation
+    }
 }
+
 ```
