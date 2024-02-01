@@ -1,6 +1,6 @@
 XCODE_USER_TEMPLATES_DIR=~/Library/Developer/Xcode/Templates/File\ Templates
-VIPER_TEMPLATES_DIR=Templates/Viper\ Module2.xctemplate
-VIPER_REMOVE_TEMPLATES_PATH=Viper\ Module2.xctemplate
+VIPER_TEMPLATES_DIR=Templates/Viper\ Module.xctemplate
+VIPER_REMOVE_TEMPLATES_PATH=Viper\ Module.xctemplate
 
 install_templates:
 	rm -R -f $(XCODE_USER_TEMPLATES_DIR)/$(VIPER_TEMPLATES_DIR)
