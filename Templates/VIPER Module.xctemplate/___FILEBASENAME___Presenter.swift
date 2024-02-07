@@ -19,7 +19,7 @@ final class ___VARIABLE_ModuleName___Presenter: ViewToPresenter___VARIABLE_Modul
 init(interactor: PresenterToInteractor___VARIABLE_ModuleName___Protocol, router: PresenterToRouter___VARIABLE_ModuleName___Protocol, view: PresenterToView___VARIABLE_ModuleName___Protocol) {
         self.interactor = interactor
         self.router = router
-        self.viewOutput = viewOutput
+        self.view = view
     }
 }
 
