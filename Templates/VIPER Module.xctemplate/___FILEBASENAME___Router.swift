@@ -26,7 +26,7 @@ final class  ___VARIABLE_ModuleName___Router: PresenterToRouter___VARIABLE_Modul
         return viewController
     }
 
-    let navigation: NavigationView
+    private let navigation: NavigationView
 
     init(navigation: NavigationView) {
         self.navigation = navigation
