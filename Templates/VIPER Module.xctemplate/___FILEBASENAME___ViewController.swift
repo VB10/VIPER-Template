@@ -10,14 +10,16 @@ import UIKit
 
 final class ___VARIABLE_ModuleName___ViewController: UIViewController, NavigationView {
     
+    // MARK: - Properties
+    var presenter: ViewToPresenter___VARIABLE_ModuleName___Protocol!
+
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = ___VARIABLE_ModuleName___View(self)
+        view.backgroundColor = .white
     }
-
-    // MARK: - Properties
-    var presenter: ViewToPresenter___VARIABLE_ModuleName___Protocol!
-    
+     
 }
 
 extension ___VARIABLE_ModuleName___ViewController: PresenterToView___VARIABLE_ModuleName___Protocol{
